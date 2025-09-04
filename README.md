@@ -1,5 +1,9 @@
 # Financial Transaction Data Pipeline
 
+- S3 bucket to airbyte source done
+- For now I couldn't connect airbyte to BigQuery will do that at a later date
+
+
 ## Analytics Engineer ELT Pipeline 
 #### Goal:
 Build an end-to-end ELT pipeline that extracts financial transaction data from an API, loads it into a data warehouse (BigQuery/Snowflake), and transforms it into analytics-ready tables using DBT.
