@@ -1,1 +1,4 @@
 \venv
+config.json
+seeds/fifa21_raw_data.csv
+seeds/fifa21_raw_data_v2.csv
