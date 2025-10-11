@@ -2,7 +2,40 @@
 
 - S3 bucket to airbyte source done
 - For now I couldn't connect airbyte to BigQuery will do that at a later date
+- Seeded `.csv` files into `/seeds/` directory in dbt
 
+
+
+. Source Freshness + Documentation
+Define sources in sources.yml and add freshness checks.
+
+Use dbt docs generate and dbt docs serve to build a browsable data catalog.
+
+2. Staging Models
+Create stg_ models that clean and rename raw data.
+
+Use dbt_utils.get_column_values() to validate expected values.
+
+3. Intermediate Models
+Build int_ models that join and enrich staging layers.
+
+Apply business logic like aggregations, flags, or derived metrics.
+
+4. Final Models
+Create fct_ and dim_ models for facts and dimensions.
+
+Use dbt tests to validate uniqueness, nulls, and referential integrity.
+
+5. Testing & CI
+Add schema tests and custom tests.
+
+Integrate with GitHub Actions or GitLab CI for automated runs.
+
+6. Snapshots
+Track slowly changing dimensions with dbt snapshot.
+
+7. Exposure Layer
+Define dashboards or reports in exposures.yml to show downstream usage.
 
 ## Analytics Engineer ELT Pipeline 
 #### Goal:
