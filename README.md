@@ -1,8 +1,31 @@
 # Financial Transaction Data Pipeline
 
-- S3 bucket to airbyte source done
-- For now I couldn't connect airbyte to BigQuery will do that at a later date
+- S3 bucket to airbyte source done (enhance once I am done calling data from the AWS S3 bucket using a .py script)
+- Connected to duckdb and using conn to view sql
 - Seeded `.csv` files into `/seeds/` directory in dbt
+- created staging in models directory which houses the seeded e-commerce 'data' `.csv`.
+- tests for my staging model and listed all columns for visiblity
+- intermediate model
+  - invoices table: invoiceNo and invoiceDate as columns
+  - customers table: CustomerID and Country
+  - orders table: UnitPrice, Quantity, Description, StockCode
+    - step 1: building intermediate model
+      1. Grain clarity: I needed to define whether my mart is per customer, per order, per product, etc
+
+- ADD STG TESTS
+- ADD ALL INTS MODELS
+- DEFINE GRAIN DONE FOR NOW 
+
+building mart model
+1. Flags & KPIs: Add fields like is_repeat_buyer, is_churned, avg_days_between_orders
+Cohorts: Use signup_date or first_order_date to group customers
+
+Incremental logic: For large orders or events tables, use order_date partitions
+
+Testing: Add not_null, unique, and accepted_values tests for key dimensions
+
+
+   
 
 
 

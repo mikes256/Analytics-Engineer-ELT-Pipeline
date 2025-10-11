@@ -2115,3 +2115,789 @@ select
 [0m23:09:38.354922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9410e2e9c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b940e940740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b940f7ccb60>]}
 [0m23:09:38.355745 [debug] [MainThread]: Flushing usage events
 [0m23:09:39.082964 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:59:12.623869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71668126f050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716680592390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71668142b830>]}
+
+
+============================== 20:59:13.053530 | 31103eea-2f37-495f-b018-86e25b135877 ==============================
+[0m20:59:13.053530 [info ] [MainThread]: Running with dbt=1.10.8
+[0m20:59:13.054502 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/codespace/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/workspaces/analytics_eng/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:59:13.079532 [info ] [MainThread]: dbt version: 1.10.8
+[0m20:59:13.080195 [info ] [MainThread]: python version: 3.12.1
+[0m20:59:13.080721 [info ] [MainThread]: python path: /usr/local/python/3.12.1/bin/python3
+[0m20:59:13.081208 [info ] [MainThread]: os info: Linux-6.8.0-1030-azure-x86_64-with-glibc2.39
+[0m20:59:13.207542 [info ] [MainThread]: Using profiles dir at /home/codespace/.dbt
+[0m20:59:13.208242 [info ] [MainThread]: Using profiles.yml file at /home/codespace/.dbt/profiles.yml
+[0m20:59:13.208785 [info ] [MainThread]: Using dbt_project.yml file at /workspaces/analytics_eng/dbt_project.yml
+[0m20:59:13.224912 [info ] [MainThread]: adapter type: duckdb
+[0m20:59:13.225570 [info ] [MainThread]: adapter version: 1.9.6
+[0m20:59:13.336079 [info ] [MainThread]: Configuration:
+[0m20:59:13.336756 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:59:13.337283 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:59:13.337751 [info ] [MainThread]: Required dependencies:
+[0m20:59:13.338251 [debug] [MainThread]: Executing "git --help"
+[0m20:59:13.340260 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:59:13.340753 [debug] [MainThread]: STDERR: "b''"
+[0m20:59:13.341204 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:59:13.341815 [info ] [MainThread]: Connection:
+[0m20:59:13.342355 [info ] [MainThread]:   database: analytics_eng
+[0m20:59:13.342866 [info ] [MainThread]:   schema: main
+[0m20:59:13.343481 [info ] [MainThread]:   path: analytics_eng.duckdb
+[0m20:59:13.344159 [info ] [MainThread]:   config_options: None
+[0m20:59:13.344834 [info ] [MainThread]:   extensions: None
+[0m20:59:13.345525 [info ] [MainThread]:   settings: {}
+[0m20:59:13.346211 [info ] [MainThread]:   external_root: .
+[0m20:59:13.346852 [info ] [MainThread]:   use_credential_provider: None
+[0m20:59:13.347364 [info ] [MainThread]:   attach: None
+[0m20:59:13.347990 [info ] [MainThread]:   filesystems: None
+[0m20:59:13.348655 [info ] [MainThread]:   remote: None
+[0m20:59:13.349345 [info ] [MainThread]:   plugins: None
+[0m20:59:13.350044 [info ] [MainThread]:   disable_transactions: False
+[0m20:59:13.350910 [info ] [MainThread]: Registered adapter: duckdb=1.9.6
+[0m20:59:13.723925 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m20:59:13.933868 [debug] [MainThread]: Using duckdb connection "debug"
+[0m20:59:13.934411 [debug] [MainThread]: On debug: select 1 as id
+[0m20:59:13.934841 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:59:13.945928 [debug] [MainThread]: SQL status: OK in 0.011 seconds
+[0m20:59:13.946987 [debug] [MainThread]: On debug: Close
+[0m20:59:13.947513 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:59:13.948054 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:59:13.950560 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.406308, "process_in_blocks": "4968", "process_kernel_time": 0.190248, "process_mem_max_rss": "148604", "process_out_blocks": "16", "process_user_time": 1.693307}
+[0m20:59:13.951345 [debug] [MainThread]: Command `dbt debug` succeeded at 20:59:13.951228 after 1.41 seconds
+[0m20:59:13.951769 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:59:13.952298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71668037b8c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71667ccc0770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716680550800>]}
+[0m20:59:13.953577 [debug] [MainThread]: Flushing usage events
+[0m20:59:14.287411 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:59:18.588840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73064a41deb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7306492f8f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x730649eeaf30>]}
+
+
+============================== 20:59:18.592871 | 7dcc4079-4e35-40a8-b32e-13d970939989 ==============================
+[0m20:59:18.592871 [info ] [MainThread]: Running with dbt=1.10.8
+[0m20:59:18.593636 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/workspaces/analytics_eng/logs', 'profiles_dir': '/home/codespace/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m20:59:19.222998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7dcc4079-4e35-40a8-b32e-13d970939989', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x730645135ca0>]}
+[0m20:59:19.285622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7dcc4079-4e35-40a8-b32e-13d970939989', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73064a41cfb0>]}
+[0m20:59:19.287663 [info ] [MainThread]: Registered adapter: duckdb=1.9.6
+[0m20:59:19.728203 [debug] [MainThread]: checksum: 265d66e81f90af29a7a28579c9b54d938c94f4a57c57be5f853267ae509b5fcb, vars: {}, profile: , target: , version: 1.10.8
+[0m20:59:19.899124 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m20:59:19.899809 [debug] [MainThread]: Partial parsing: added file: analytics_eng://models/int/int_ecommerce__invoices.sql
+[0m20:59:19.900398 [debug] [MainThread]: Partial parsing: updated file: analytics_eng://models/stg/stg_ecommerce_data.sql
+[0m20:59:20.305310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7dcc4079-4e35-40a8-b32e-13d970939989', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x730644751e20>]}
+[0m20:59:20.374953 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/analytics_eng/target/manifest.json
+[0m20:59:20.377159 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/analytics_eng/target/semantic_manifest.json
+[0m20:59:20.389343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7dcc4079-4e35-40a8-b32e-13d970939989', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73064ab7a1b0>]}
+[0m20:59:20.389926 [info ] [MainThread]: Found 1 seed, 2 models, 2 data tests, 431 macros
+[0m20:59:20.390483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7dcc4079-4e35-40a8-b32e-13d970939989', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x730644ec8da0>]}
+[0m20:59:20.392296 [info ] [MainThread]: 
+[0m20:59:20.392863 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:59:20.393343 [info ] [MainThread]: 
+[0m20:59:20.394010 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m20:59:20.399773 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_analytics_eng'
+[0m20:59:20.487439 [debug] [ThreadPool]: Using duckdb connection "list_analytics_eng"
+[0m20:59:20.488021 [debug] [ThreadPool]: On list_analytics_eng: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "connection_name": "list_analytics_eng"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"analytics_eng"'
+    
+  
+  
+[0m20:59:20.488484 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:59:20.502263 [debug] [ThreadPool]: SQL status: OK in 0.014 seconds
+[0m20:59:20.503919 [debug] [ThreadPool]: On list_analytics_eng: Close
+[0m20:59:20.504786 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics_eng, now create_analytics_eng_main)
+[0m20:59:20.505389 [debug] [ThreadPool]: Creating schema "database: "analytics_eng"
+schema: "main"
+"
+[0m20:59:20.512114 [debug] [ThreadPool]: Using duckdb connection "create_analytics_eng_main"
+[0m20:59:20.512584 [debug] [ThreadPool]: On create_analytics_eng_main: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "connection_name": "create_analytics_eng_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='analytics_eng'
+        and type='sqlite'
+    
+  
+[0m20:59:20.513009 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:59:20.514008 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m20:59:20.515511 [debug] [ThreadPool]: Using duckdb connection "create_analytics_eng_main"
+[0m20:59:20.515951 [debug] [ThreadPool]: On create_analytics_eng_main: BEGIN
+[0m20:59:20.516547 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:59:20.517080 [debug] [ThreadPool]: Using duckdb connection "create_analytics_eng_main"
+[0m20:59:20.517727 [debug] [ThreadPool]: On create_analytics_eng_main: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "connection_name": "create_analytics_eng_main"} */
+
+    
+    
+        create schema if not exists "analytics_eng"."main"
+    
+[0m20:59:20.518632 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:59:20.520169 [debug] [ThreadPool]: On create_analytics_eng_main: COMMIT
+[0m20:59:20.520866 [debug] [ThreadPool]: Using duckdb connection "create_analytics_eng_main"
+[0m20:59:20.521510 [debug] [ThreadPool]: On create_analytics_eng_main: COMMIT
+[0m20:59:20.522375 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:59:20.523027 [debug] [ThreadPool]: On create_analytics_eng_main: Close
+[0m20:59:20.525221 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_analytics_eng_main, now list_analytics_eng_main)
+[0m20:59:20.536977 [debug] [ThreadPool]: Using duckdb connection "list_analytics_eng_main"
+[0m20:59:20.537427 [debug] [ThreadPool]: On list_analytics_eng_main: BEGIN
+[0m20:59:20.537836 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:59:20.538551 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m20:59:20.538986 [debug] [ThreadPool]: Using duckdb connection "list_analytics_eng_main"
+[0m20:59:20.539392 [debug] [ThreadPool]: On list_analytics_eng_main: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "connection_name": "list_analytics_eng_main"} */
+select
+      'analytics_eng' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'analytics_eng'
+  
+[0m20:59:20.549222 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m20:59:20.550627 [debug] [ThreadPool]: On list_analytics_eng_main: ROLLBACK
+[0m20:59:20.552690 [debug] [ThreadPool]: Failed to rollback 'list_analytics_eng_main'
+[0m20:59:20.553447 [debug] [ThreadPool]: On list_analytics_eng_main: Close
+[0m20:59:20.555021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7dcc4079-4e35-40a8-b32e-13d970939989', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73064ab7a1e0>]}
+[0m20:59:20.555824 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:59:20.556257 [debug] [MainThread]: On master: BEGIN
+[0m20:59:20.556807 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:59:20.557764 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m20:59:20.558455 [debug] [MainThread]: On master: COMMIT
+[0m20:59:20.559182 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:59:20.559782 [debug] [MainThread]: On master: COMMIT
+[0m20:59:20.560355 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:59:20.560777 [debug] [MainThread]: On master: Close
+[0m20:59:20.563076 [debug] [Thread-1 (]: Began running node model.analytics_eng.int_ecommerce__invoices
+[0m20:59:20.564028 [info ] [Thread-1 (]: 1 of 2 START sql view model main.int_ecommerce__invoices ....................... [RUN]
+[0m20:59:20.565070 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_eng_main, now model.analytics_eng.int_ecommerce__invoices)
+[0m20:59:20.565653 [debug] [Thread-1 (]: Began compiling node model.analytics_eng.int_ecommerce__invoices
+[0m20:59:20.573809 [debug] [Thread-1 (]: Writing injected SQL for node "model.analytics_eng.int_ecommerce__invoices"
+[0m20:59:20.574564 [debug] [Thread-1 (]: Began executing node model.analytics_eng.int_ecommerce__invoices
+[0m20:59:20.605571 [debug] [Thread-1 (]: Writing runtime sql for node "model.analytics_eng.int_ecommerce__invoices"
+[0m20:59:20.606430 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.int_ecommerce__invoices"
+[0m20:59:20.606950 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: BEGIN
+[0m20:59:20.607407 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:59:20.608217 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m20:59:20.608668 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.int_ecommerce__invoices"
+[0m20:59:20.609129 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.int_ecommerce__invoices"} */
+
+  
+  create view "analytics_eng"."main"."int_ecommerce__invoices__dbt_tmp" as (
+    with int_invoice as (
+
+    select 
+
+        InvoiceNo
+        , InvoiceDate
+
+    from first_data
+)
+  );
+
+[0m20:59:20.610472 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.int_ecommerce__invoices"} */
+
+  
+  create view "analytics_eng"."main"."int_ecommerce__invoices__dbt_tmp" as (
+    with int_invoice as (
+
+    select 
+
+        InvoiceNo
+        , InvoiceDate
+
+    from first_data
+)
+  );
+
+[0m20:59:20.610979 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m20:59:20.611596 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: ROLLBACK
+[0m20:59:20.654817 [debug] [Thread-1 (]: Failed to rollback 'model.analytics_eng.int_ecommerce__invoices'
+[0m20:59:20.655408 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: Close
+[0m20:59:20.657885 [debug] [Thread-1 (]: Runtime Error in model int_ecommerce__invoices (models/int/int_ecommerce__invoices.sql)
+  Parser Error: syntax error at or near ")"
+[0m20:59:20.659719 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7dcc4079-4e35-40a8-b32e-13d970939989', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73064a470770>]}
+[0m20:59:20.660504 [error] [Thread-1 (]: 1 of 2 ERROR creating sql view model main.int_ecommerce__invoices .............. [[31mERROR[0m in 0.09s]
+[0m20:59:20.661311 [debug] [Thread-1 (]: Finished running node model.analytics_eng.int_ecommerce__invoices
+[0m20:59:20.661837 [debug] [Thread-1 (]: Began running node model.analytics_eng.stg_ecommerce_data
+[0m20:59:20.662543 [debug] [Thread-4 (]: Marking all children of 'model.analytics_eng.int_ecommerce__invoices' to be skipped because of status 'error'.  Reason: Runtime Error in model int_ecommerce__invoices (models/int/int_ecommerce__invoices.sql)
+  Parser Error: syntax error at or near ")".
+[0m20:59:20.664133 [info ] [Thread-1 (]: 2 of 2 START sql view model main.stg_ecommerce_data ............................ [RUN]
+[0m20:59:20.666410 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.analytics_eng.int_ecommerce__invoices, now model.analytics_eng.stg_ecommerce_data)
+[0m20:59:20.667274 [debug] [Thread-1 (]: Began compiling node model.analytics_eng.stg_ecommerce_data
+[0m20:59:20.671227 [debug] [Thread-1 (]: Writing injected SQL for node "model.analytics_eng.stg_ecommerce_data"
+[0m20:59:20.671954 [debug] [Thread-1 (]: Began executing node model.analytics_eng.stg_ecommerce_data
+[0m20:59:20.676610 [debug] [Thread-1 (]: Writing runtime sql for node "model.analytics_eng.stg_ecommerce_data"
+[0m20:59:20.677346 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m20:59:20.677845 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: BEGIN
+[0m20:59:20.678289 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:59:20.679114 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m20:59:20.679597 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m20:59:20.680102 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.stg_ecommerce_data"} */
+
+  
+  create view "analytics_eng"."main"."stg_ecommerce_data__dbt_tmp" as (
+    with first_data as (
+    select
+
+        InvoiceNo::int as invoice_number
+        , StockCode as stock_code
+        , Description as description
+        , Quantity::int as quantity
+        , InvoiceDate::datetime as invoice_at
+        , UnitPrice::numeric as unit_price
+        , CustomerID::int as customer_id
+        , Country as country
+
+    from "analytics_eng"."main"."data"
+)
+select * from first_data
+  );
+
+[0m20:59:20.681167 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m20:59:20.687193 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m20:59:20.687688 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.stg_ecommerce_data"} */
+alter view "analytics_eng"."main"."stg_ecommerce_data__dbt_tmp" rename to "stg_ecommerce_data"
+[0m20:59:20.688492 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m20:59:20.699201 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: COMMIT
+[0m20:59:20.699965 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m20:59:20.700497 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: COMMIT
+[0m20:59:20.720345 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m20:59:20.726074 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m20:59:20.726600 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.stg_ecommerce_data"} */
+
+      drop view if exists "analytics_eng"."main"."stg_ecommerce_data__dbt_backup" cascade
+    
+[0m20:59:20.727362 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m20:59:20.729732 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: Close
+[0m20:59:20.730514 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7dcc4079-4e35-40a8-b32e-13d970939989', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7306443d1fd0>]}
+[0m20:59:20.731286 [info ] [Thread-1 (]: 2 of 2 OK created sql view model main.stg_ecommerce_data ....................... [[32mOK[0m in 0.06s]
+[0m20:59:20.732069 [debug] [Thread-1 (]: Finished running node model.analytics_eng.stg_ecommerce_data
+[0m20:59:20.733372 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:59:20.733837 [debug] [MainThread]: On master: BEGIN
+[0m20:59:20.734268 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:59:20.734990 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m20:59:20.735415 [debug] [MainThread]: On master: COMMIT
+[0m20:59:20.735826 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:59:20.736214 [debug] [MainThread]: On master: COMMIT
+[0m20:59:20.736749 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:59:20.737405 [debug] [MainThread]: On master: Close
+[0m20:59:20.738665 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:59:20.739329 [debug] [MainThread]: Connection 'model.analytics_eng.stg_ecommerce_data' was properly closed.
+[0m20:59:20.740827 [info ] [MainThread]: 
+[0m20:59:20.742190 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.35 seconds (0.35s).
+[0m20:59:20.743813 [debug] [MainThread]: Command end result
+[0m20:59:20.763697 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/analytics_eng/target/manifest.json
+[0m20:59:20.765242 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/analytics_eng/target/semantic_manifest.json
+[0m20:59:20.771654 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/analytics_eng/target/run_results.json
+[0m20:59:20.772334 [info ] [MainThread]: 
+[0m20:59:20.773110 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m20:59:20.773859 [info ] [MainThread]: 
+[0m20:59:20.774635 [error] [MainThread]: [31mFailure in model int_ecommerce__invoices (models/int/int_ecommerce__invoices.sql)[0m
+[0m20:59:20.775290 [error] [MainThread]:   Runtime Error in model int_ecommerce__invoices (models/int/int_ecommerce__invoices.sql)
+  Parser Error: syntax error at or near ")"
+[0m20:59:20.775738 [info ] [MainThread]: 
+[0m20:59:20.776339 [info ] [MainThread]:   compiled code at target/compiled/analytics_eng/models/int/int_ecommerce__invoices.sql
+[0m20:59:20.777034 [info ] [MainThread]: 
+[0m20:59:20.777752 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=2
+[0m20:59:20.779205 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.2486296, "process_in_blocks": "8272", "process_kernel_time": 0.191519, "process_mem_max_rss": "160388", "process_out_blocks": "2728", "process_user_time": 2.682277}
+[0m20:59:20.779968 [debug] [MainThread]: Command `dbt run` failed at 20:59:20.779814 after 2.25 seconds
+[0m20:59:20.780731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73064927da60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7306446a7aa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73064a4fba40>]}
+[0m20:59:20.781502 [debug] [MainThread]: Flushing usage events
+[0m20:59:21.103591 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:00:34.368829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b874b0d700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b874b67c20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b874b0d5e0>]}
+
+
+============================== 21:00:34.371852 | 3113b662-f875-4c48-9812-e57ac1afad04 ==============================
+[0m21:00:34.371852 [info ] [MainThread]: Running with dbt=1.10.8
+[0m21:00:34.372633 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/workspaces/analytics_eng/logs', 'version_check': 'True', 'profiles_dir': '/home/codespace/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:00:34.603125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3113b662-f875-4c48-9812-e57ac1afad04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b86f774dd0>]}
+[0m21:00:34.664860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3113b662-f875-4c48-9812-e57ac1afad04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b87390d160>]}
+[0m21:00:34.667846 [info ] [MainThread]: Registered adapter: duckdb=1.9.6
+[0m21:00:34.790676 [debug] [MainThread]: checksum: 265d66e81f90af29a7a28579c9b54d938c94f4a57c57be5f853267ae509b5fcb, vars: {}, profile: , target: , version: 1.10.8
+[0m21:00:34.897237 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m21:00:34.897987 [debug] [MainThread]: Partial parsing: updated file: analytics_eng://models/stg/stg_ecommerce_data.sql
+[0m21:00:34.898546 [debug] [MainThread]: Partial parsing: updated file: analytics_eng://models/int/int_ecommerce__invoices.sql
+[0m21:00:35.324167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3113b662-f875-4c48-9812-e57ac1afad04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b86ed6f110>]}
+[0m21:00:35.394502 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/analytics_eng/target/manifest.json
+[0m21:00:35.396269 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/analytics_eng/target/semantic_manifest.json
+[0m21:00:35.407609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3113b662-f875-4c48-9812-e57ac1afad04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b86edc2540>]}
+[0m21:00:35.408211 [info ] [MainThread]: Found 1 seed, 2 models, 2 data tests, 431 macros
+[0m21:00:35.408745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3113b662-f875-4c48-9812-e57ac1afad04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b8751bc110>]}
+[0m21:00:35.410516 [info ] [MainThread]: 
+[0m21:00:35.411090 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:00:35.411549 [info ] [MainThread]: 
+[0m21:00:35.412196 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:00:35.418384 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_analytics_eng'
+[0m21:00:35.509692 [debug] [ThreadPool]: Using duckdb connection "list_analytics_eng"
+[0m21:00:35.510311 [debug] [ThreadPool]: On list_analytics_eng: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "connection_name": "list_analytics_eng"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"analytics_eng"'
+    
+  
+  
+[0m21:00:35.510736 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:00:35.525495 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m21:00:35.527070 [debug] [ThreadPool]: On list_analytics_eng: Close
+[0m21:00:35.528000 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics_eng, now create_analytics_eng_main)
+[0m21:00:35.528567 [debug] [ThreadPool]: Creating schema "database: "analytics_eng"
+schema: "main"
+"
+[0m21:00:35.535414 [debug] [ThreadPool]: Using duckdb connection "create_analytics_eng_main"
+[0m21:00:35.535879 [debug] [ThreadPool]: On create_analytics_eng_main: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "connection_name": "create_analytics_eng_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='analytics_eng'
+        and type='sqlite'
+    
+  
+[0m21:00:35.536289 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:00:35.537324 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:00:35.538837 [debug] [ThreadPool]: Using duckdb connection "create_analytics_eng_main"
+[0m21:00:35.539266 [debug] [ThreadPool]: On create_analytics_eng_main: BEGIN
+[0m21:00:35.539884 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:00:35.540287 [debug] [ThreadPool]: Using duckdb connection "create_analytics_eng_main"
+[0m21:00:35.540684 [debug] [ThreadPool]: On create_analytics_eng_main: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "connection_name": "create_analytics_eng_main"} */
+
+    
+    
+        create schema if not exists "analytics_eng"."main"
+    
+[0m21:00:35.541289 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:00:35.542206 [debug] [ThreadPool]: On create_analytics_eng_main: COMMIT
+[0m21:00:35.542681 [debug] [ThreadPool]: Using duckdb connection "create_analytics_eng_main"
+[0m21:00:35.543122 [debug] [ThreadPool]: On create_analytics_eng_main: COMMIT
+[0m21:00:35.543663 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:00:35.544107 [debug] [ThreadPool]: On create_analytics_eng_main: Close
+[0m21:00:35.545691 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_analytics_eng_main, now list_analytics_eng_main)
+[0m21:00:35.552530 [debug] [ThreadPool]: Using duckdb connection "list_analytics_eng_main"
+[0m21:00:35.552971 [debug] [ThreadPool]: On list_analytics_eng_main: BEGIN
+[0m21:00:35.553396 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:00:35.554071 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:00:35.554477 [debug] [ThreadPool]: Using duckdb connection "list_analytics_eng_main"
+[0m21:00:35.554879 [debug] [ThreadPool]: On list_analytics_eng_main: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "connection_name": "list_analytics_eng_main"} */
+select
+      'analytics_eng' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'analytics_eng'
+  
+[0m21:00:35.564527 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m21:00:35.565965 [debug] [ThreadPool]: On list_analytics_eng_main: ROLLBACK
+[0m21:00:35.567934 [debug] [ThreadPool]: Failed to rollback 'list_analytics_eng_main'
+[0m21:00:35.568624 [debug] [ThreadPool]: On list_analytics_eng_main: Close
+[0m21:00:35.570434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3113b662-f875-4c48-9812-e57ac1afad04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b86f591700>]}
+[0m21:00:35.571124 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:00:35.571537 [debug] [MainThread]: On master: BEGIN
+[0m21:00:35.572104 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:00:35.573122 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:00:35.573776 [debug] [MainThread]: On master: COMMIT
+[0m21:00:35.574214 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:00:35.574593 [debug] [MainThread]: On master: COMMIT
+[0m21:00:35.575154 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:00:35.575558 [debug] [MainThread]: On master: Close
+[0m21:00:35.577610 [debug] [Thread-1 (]: Began running node model.analytics_eng.int_ecommerce__invoices
+[0m21:00:35.578263 [info ] [Thread-1 (]: 1 of 2 START sql view model main.int_ecommerce__invoices ....................... [RUN]
+[0m21:00:35.578933 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_eng_main, now model.analytics_eng.int_ecommerce__invoices)
+[0m21:00:35.579409 [debug] [Thread-1 (]: Began compiling node model.analytics_eng.int_ecommerce__invoices
+[0m21:00:35.586105 [debug] [Thread-1 (]: Writing injected SQL for node "model.analytics_eng.int_ecommerce__invoices"
+[0m21:00:35.587172 [debug] [Thread-1 (]: Began executing node model.analytics_eng.int_ecommerce__invoices
+[0m21:00:35.619494 [debug] [Thread-1 (]: Writing runtime sql for node "model.analytics_eng.int_ecommerce__invoices"
+[0m21:00:35.620386 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.int_ecommerce__invoices"
+[0m21:00:35.620908 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: BEGIN
+[0m21:00:35.621363 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:00:35.622258 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:00:35.622725 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.int_ecommerce__invoices"
+[0m21:00:35.623178 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.int_ecommerce__invoices"} */
+
+  
+  create view "analytics_eng"."main"."int_ecommerce__invoices__dbt_tmp" as (
+    with int_invoice as (
+
+    select 
+
+        invoice_number
+        , invoice_at
+
+    from first_data
+)
+select * 
+from int_invoice
+  );
+
+[0m21:00:35.624288 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.int_ecommerce__invoices"} */
+
+  
+  create view "analytics_eng"."main"."int_ecommerce__invoices__dbt_tmp" as (
+    with int_invoice as (
+
+    select 
+
+        invoice_number
+        , invoice_at
+
+    from first_data
+)
+select * 
+from int_invoice
+  );
+
+[0m21:00:35.624825 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m21:00:35.625452 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: ROLLBACK
+[0m21:00:35.628956 [debug] [Thread-1 (]: Failed to rollback 'model.analytics_eng.int_ecommerce__invoices'
+[0m21:00:35.629447 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: Close
+[0m21:00:35.631762 [debug] [Thread-1 (]: Runtime Error in model int_ecommerce__invoices (models/int/int_ecommerce__invoices.sql)
+  Catalog Error: Table with name first_data does not exist!
+  Did you mean "stg_ecommerce_data"?
+  
+  LINE 12:     from first_data
+                    ^
+[0m21:00:35.633422 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3113b662-f875-4c48-9812-e57ac1afad04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b86ecb1880>]}
+[0m21:00:35.634175 [error] [Thread-1 (]: 1 of 2 ERROR creating sql view model main.int_ecommerce__invoices .............. [[31mERROR[0m in 0.05s]
+[0m21:00:35.634981 [debug] [Thread-1 (]: Finished running node model.analytics_eng.int_ecommerce__invoices
+[0m21:00:35.635484 [debug] [Thread-1 (]: Began running node model.analytics_eng.stg_ecommerce_data
+[0m21:00:35.636047 [debug] [Thread-4 (]: Marking all children of 'model.analytics_eng.int_ecommerce__invoices' to be skipped because of status 'error'.  Reason: Runtime Error in model int_ecommerce__invoices (models/int/int_ecommerce__invoices.sql)
+  Catalog Error: Table with name first_data does not exist!
+  Did you mean "stg_ecommerce_data"?
+  
+  LINE 12:     from first_data
+                    ^.
+[0m21:00:35.636659 [info ] [Thread-1 (]: 2 of 2 START sql view model main.stg_ecommerce_data ............................ [RUN]
+[0m21:00:35.638012 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.analytics_eng.int_ecommerce__invoices, now model.analytics_eng.stg_ecommerce_data)
+[0m21:00:35.638509 [debug] [Thread-1 (]: Began compiling node model.analytics_eng.stg_ecommerce_data
+[0m21:00:35.642168 [debug] [Thread-1 (]: Writing injected SQL for node "model.analytics_eng.stg_ecommerce_data"
+[0m21:00:35.643141 [debug] [Thread-1 (]: Began executing node model.analytics_eng.stg_ecommerce_data
+[0m21:00:35.647750 [debug] [Thread-1 (]: Writing runtime sql for node "model.analytics_eng.stg_ecommerce_data"
+[0m21:00:35.648491 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m21:00:35.648982 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: BEGIN
+[0m21:00:35.649426 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:00:35.650221 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:00:35.650669 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m21:00:35.651131 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.stg_ecommerce_data"} */
+
+  
+  create view "analytics_eng"."main"."stg_ecommerce_data__dbt_tmp" as (
+    with stg_data as (
+    select
+
+        InvoiceNo::int as invoice_number
+        , StockCode as stock_code
+        , Description as description
+        , Quantity::int as quantity
+        , InvoiceDate::datetime as invoice_at
+        , UnitPrice::numeric as unit_price
+        , CustomerID::int as customer_id
+        , Country as country
+
+    from "analytics_eng"."main"."data"
+)
+select * from stg_data
+  );
+
+[0m21:00:35.652140 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:00:35.658295 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m21:00:35.658806 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.stg_ecommerce_data"} */
+alter view "analytics_eng"."main"."stg_ecommerce_data" rename to "stg_ecommerce_data__dbt_backup"
+[0m21:00:35.659636 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:00:35.663684 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m21:00:35.664190 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.stg_ecommerce_data"} */
+alter view "analytics_eng"."main"."stg_ecommerce_data__dbt_tmp" rename to "stg_ecommerce_data"
+[0m21:00:35.665195 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:00:35.679413 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: COMMIT
+[0m21:00:35.679934 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m21:00:35.680393 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: COMMIT
+[0m21:00:35.690476 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m21:00:35.695886 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m21:00:35.696373 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.stg_ecommerce_data"} */
+
+      drop view if exists "analytics_eng"."main"."stg_ecommerce_data__dbt_backup" cascade
+    
+[0m21:00:35.697979 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:00:35.700347 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: Close
+[0m21:00:35.701096 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3113b662-f875-4c48-9812-e57ac1afad04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b86e14bbf0>]}
+[0m21:00:35.701843 [info ] [Thread-1 (]: 2 of 2 OK created sql view model main.stg_ecommerce_data ....................... [[32mOK[0m in 0.06s]
+[0m21:00:35.702608 [debug] [Thread-1 (]: Finished running node model.analytics_eng.stg_ecommerce_data
+[0m21:00:35.703926 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:00:35.704388 [debug] [MainThread]: On master: BEGIN
+[0m21:00:35.704776 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:00:35.705446 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:00:35.705873 [debug] [MainThread]: On master: COMMIT
+[0m21:00:35.706260 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:00:35.706628 [debug] [MainThread]: On master: COMMIT
+[0m21:00:35.707242 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:00:35.707888 [debug] [MainThread]: On master: Close
+[0m21:00:35.708424 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:00:35.708934 [debug] [MainThread]: Connection 'model.analytics_eng.stg_ecommerce_data' was properly closed.
+[0m21:00:35.709650 [info ] [MainThread]: 
+[0m21:00:35.710402 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.30 seconds (0.30s).
+[0m21:00:35.711863 [debug] [MainThread]: Command end result
+[0m21:00:35.733055 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/analytics_eng/target/manifest.json
+[0m21:00:35.734729 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/analytics_eng/target/semantic_manifest.json
+[0m21:00:35.741383 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/analytics_eng/target/run_results.json
+[0m21:00:35.741846 [info ] [MainThread]: 
+[0m21:00:35.742414 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m21:00:35.743131 [info ] [MainThread]: 
+[0m21:00:35.743949 [error] [MainThread]: [31mFailure in model int_ecommerce__invoices (models/int/int_ecommerce__invoices.sql)[0m
+[0m21:00:35.744834 [error] [MainThread]:   Runtime Error in model int_ecommerce__invoices (models/int/int_ecommerce__invoices.sql)
+  Catalog Error: Table with name first_data does not exist!
+  Did you mean "stg_ecommerce_data"?
+  
+  LINE 12:     from first_data
+                    ^
+[0m21:00:35.745517 [info ] [MainThread]: 
+[0m21:00:35.746318 [info ] [MainThread]:   compiled code at target/compiled/analytics_eng/models/int/int_ecommerce__invoices.sql
+[0m21:00:35.747016 [info ] [MainThread]: 
+[0m21:00:35.747710 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=2
+[0m21:00:35.749091 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.4345294, "process_in_blocks": "224", "process_kernel_time": 0.180668, "process_mem_max_rss": "161520", "process_out_blocks": "2736", "process_user_time": 2.65113}
+[0m21:00:35.749941 [debug] [MainThread]: Command `dbt run` failed at 21:00:35.749773 after 1.44 seconds
+[0m21:00:35.750739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b87390c830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b86ed6ddc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71b873a639b0>]}
+[0m21:00:35.751524 [debug] [MainThread]: Flushing usage events
+[0m21:00:36.095474 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:01:11.641758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e44a16a0620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e44a18a07d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e44a1e68980>]}
+
+
+============================== 21:01:11.644883 | e1a4431d-80eb-49cd-a135-1e0e1e3e4ea6 ==============================
+[0m21:01:11.644883 [info ] [MainThread]: Running with dbt=1.10.8
+[0m21:01:11.645685 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/workspaces/analytics_eng/logs', 'profiles_dir': '/home/codespace/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:01:11.868948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e1a4431d-80eb-49cd-a135-1e0e1e3e4ea6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e449d38d880>]}
+[0m21:01:11.931669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e1a4431d-80eb-49cd-a135-1e0e1e3e4ea6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e44a09b3830>]}
+[0m21:01:11.933689 [info ] [MainThread]: Registered adapter: duckdb=1.9.6
+[0m21:01:12.032116 [debug] [MainThread]: checksum: 265d66e81f90af29a7a28579c9b54d938c94f4a57c57be5f853267ae509b5fcb, vars: {}, profile: , target: , version: 1.10.8
+[0m21:01:12.139164 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:01:12.139892 [debug] [MainThread]: Partial parsing: updated file: analytics_eng://models/int/int_ecommerce__invoices.sql
+[0m21:01:12.448728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e1a4431d-80eb-49cd-a135-1e0e1e3e4ea6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e449c5f4cb0>]}
+[0m21:01:12.535412 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/analytics_eng/target/manifest.json
+[0m21:01:12.537187 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/analytics_eng/target/semantic_manifest.json
+[0m21:01:12.551635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e1a4431d-80eb-49cd-a135-1e0e1e3e4ea6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e44a1858650>]}
+[0m21:01:12.552295 [info ] [MainThread]: Found 1 seed, 2 models, 2 data tests, 431 macros
+[0m21:01:12.552864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e1a4431d-80eb-49cd-a135-1e0e1e3e4ea6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e4493f08ef0>]}
+[0m21:01:12.554651 [info ] [MainThread]: 
+[0m21:01:12.555261 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:01:12.555738 [info ] [MainThread]: 
+[0m21:01:12.556405 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:01:12.562394 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_analytics_eng'
+[0m21:01:12.598150 [debug] [ThreadPool]: Using duckdb connection "list_analytics_eng"
+[0m21:01:12.598728 [debug] [ThreadPool]: On list_analytics_eng: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "connection_name": "list_analytics_eng"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"analytics_eng"'
+    
+  
+  
+[0m21:01:12.599447 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:01:12.619612 [debug] [ThreadPool]: SQL status: OK in 0.020 seconds
+[0m21:01:12.622158 [debug] [ThreadPool]: On list_analytics_eng: Close
+[0m21:01:12.623381 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics_eng, now create_analytics_eng_main)
+[0m21:01:12.624318 [debug] [ThreadPool]: Creating schema "database: "analytics_eng"
+schema: "main"
+"
+[0m21:01:12.636676 [debug] [ThreadPool]: Using duckdb connection "create_analytics_eng_main"
+[0m21:01:12.637257 [debug] [ThreadPool]: On create_analytics_eng_main: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "connection_name": "create_analytics_eng_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='analytics_eng'
+        and type='sqlite'
+    
+  
+[0m21:01:12.637657 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:01:12.638996 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:01:12.640403 [debug] [ThreadPool]: Using duckdb connection "create_analytics_eng_main"
+[0m21:01:12.640844 [debug] [ThreadPool]: On create_analytics_eng_main: BEGIN
+[0m21:01:12.641446 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:01:12.641856 [debug] [ThreadPool]: Using duckdb connection "create_analytics_eng_main"
+[0m21:01:12.642238 [debug] [ThreadPool]: On create_analytics_eng_main: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "connection_name": "create_analytics_eng_main"} */
+
+    
+    
+        create schema if not exists "analytics_eng"."main"
+    
+[0m21:01:12.642849 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:01:12.643775 [debug] [ThreadPool]: On create_analytics_eng_main: COMMIT
+[0m21:01:12.644211 [debug] [ThreadPool]: Using duckdb connection "create_analytics_eng_main"
+[0m21:01:12.644582 [debug] [ThreadPool]: On create_analytics_eng_main: COMMIT
+[0m21:01:12.645135 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:01:12.645552 [debug] [ThreadPool]: On create_analytics_eng_main: Close
+[0m21:01:12.646989 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_analytics_eng_main, now list_analytics_eng_main)
+[0m21:01:12.652663 [debug] [ThreadPool]: Using duckdb connection "list_analytics_eng_main"
+[0m21:01:12.653110 [debug] [ThreadPool]: On list_analytics_eng_main: BEGIN
+[0m21:01:12.653500 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:01:12.654152 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:01:12.654549 [debug] [ThreadPool]: Using duckdb connection "list_analytics_eng_main"
+[0m21:01:12.654958 [debug] [ThreadPool]: On list_analytics_eng_main: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "connection_name": "list_analytics_eng_main"} */
+select
+      'analytics_eng' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'analytics_eng'
+  
+[0m21:01:12.664685 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m21:01:12.666204 [debug] [ThreadPool]: On list_analytics_eng_main: ROLLBACK
+[0m21:01:12.667526 [debug] [ThreadPool]: Failed to rollback 'list_analytics_eng_main'
+[0m21:01:12.667986 [debug] [ThreadPool]: On list_analytics_eng_main: Close
+[0m21:01:12.669158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e1a4431d-80eb-49cd-a135-1e0e1e3e4ea6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e44a2f923f0>]}
+[0m21:01:12.669748 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:01:12.670206 [debug] [MainThread]: On master: BEGIN
+[0m21:01:12.670597 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:01:12.671281 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:01:12.671709 [debug] [MainThread]: On master: COMMIT
+[0m21:01:12.672124 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:01:12.672512 [debug] [MainThread]: On master: COMMIT
+[0m21:01:12.673081 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:01:12.673492 [debug] [MainThread]: On master: Close
+[0m21:01:12.675697 [debug] [Thread-1 (]: Began running node model.analytics_eng.int_ecommerce__invoices
+[0m21:01:12.676383 [info ] [Thread-1 (]: 1 of 2 START sql view model main.int_ecommerce__invoices ....................... [RUN]
+[0m21:01:12.677043 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_eng_main, now model.analytics_eng.int_ecommerce__invoices)
+[0m21:01:12.677509 [debug] [Thread-1 (]: Began compiling node model.analytics_eng.int_ecommerce__invoices
+[0m21:01:12.685070 [debug] [Thread-1 (]: Writing injected SQL for node "model.analytics_eng.int_ecommerce__invoices"
+[0m21:01:12.685951 [debug] [Thread-1 (]: Began executing node model.analytics_eng.int_ecommerce__invoices
+[0m21:01:12.717614 [debug] [Thread-1 (]: Writing runtime sql for node "model.analytics_eng.int_ecommerce__invoices"
+[0m21:01:12.718574 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.int_ecommerce__invoices"
+[0m21:01:12.719094 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: BEGIN
+[0m21:01:12.719535 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:01:12.720434 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:01:12.720907 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.int_ecommerce__invoices"
+[0m21:01:12.721343 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.int_ecommerce__invoices"} */
+
+  
+  create view "analytics_eng"."main"."int_ecommerce__invoices__dbt_tmp" as (
+    with int_invoice as (
+
+    select 
+
+        invoice_number
+        , invoice_at
+
+    from stg_ecommerce_data
+)
+select * 
+from int_invoice
+  );
+
+[0m21:01:12.722387 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:01:12.728600 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.int_ecommerce__invoices"
+[0m21:01:12.729146 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.int_ecommerce__invoices"} */
+alter view "analytics_eng"."main"."int_ecommerce__invoices__dbt_tmp" rename to "int_ecommerce__invoices"
+[0m21:01:12.730052 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:01:12.739820 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: COMMIT
+[0m21:01:12.740334 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.int_ecommerce__invoices"
+[0m21:01:12.740801 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: COMMIT
+[0m21:01:12.750634 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m21:01:12.757889 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.int_ecommerce__invoices"
+[0m21:01:12.758972 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.int_ecommerce__invoices"} */
+
+      drop view if exists "analytics_eng"."main"."int_ecommerce__invoices__dbt_backup" cascade
+    
+[0m21:01:12.760126 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:01:12.763842 [debug] [Thread-1 (]: On model.analytics_eng.int_ecommerce__invoices: Close
+[0m21:01:12.766986 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1a4431d-80eb-49cd-a135-1e0e1e3e4ea6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e4493355c10>]}
+[0m21:01:12.768118 [info ] [Thread-1 (]: 1 of 2 OK created sql view model main.int_ecommerce__invoices .................. [[32mOK[0m in 0.09s]
+[0m21:01:12.769321 [debug] [Thread-1 (]: Finished running node model.analytics_eng.int_ecommerce__invoices
+[0m21:01:12.770196 [debug] [Thread-1 (]: Began running node model.analytics_eng.stg_ecommerce_data
+[0m21:01:12.771127 [info ] [Thread-1 (]: 2 of 2 START sql view model main.stg_ecommerce_data ............................ [RUN]
+[0m21:01:12.772059 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.analytics_eng.int_ecommerce__invoices, now model.analytics_eng.stg_ecommerce_data)
+[0m21:01:12.772858 [debug] [Thread-1 (]: Began compiling node model.analytics_eng.stg_ecommerce_data
+[0m21:01:12.780007 [debug] [Thread-1 (]: Writing injected SQL for node "model.analytics_eng.stg_ecommerce_data"
+[0m21:01:12.781408 [debug] [Thread-1 (]: Began executing node model.analytics_eng.stg_ecommerce_data
+[0m21:01:12.861987 [debug] [Thread-1 (]: Writing runtime sql for node "model.analytics_eng.stg_ecommerce_data"
+[0m21:01:12.862892 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m21:01:12.863402 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: BEGIN
+[0m21:01:12.863853 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:01:12.864713 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:01:12.865202 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m21:01:12.865655 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.stg_ecommerce_data"} */
+
+  
+  create view "analytics_eng"."main"."stg_ecommerce_data__dbt_tmp" as (
+    with stg_data as (
+    select
+
+        InvoiceNo::int as invoice_number
+        , StockCode as stock_code
+        , Description as description
+        , Quantity::int as quantity
+        , InvoiceDate::datetime as invoice_at
+        , UnitPrice::numeric as unit_price
+        , CustomerID::int as customer_id
+        , Country as country
+
+    from "analytics_eng"."main"."data"
+)
+select * from stg_data
+  );
+
+[0m21:01:12.866694 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:01:12.869776 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m21:01:12.870283 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.stg_ecommerce_data"} */
+alter view "analytics_eng"."main"."stg_ecommerce_data" rename to "stg_ecommerce_data__dbt_backup"
+[0m21:01:12.871102 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:01:12.874005 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m21:01:12.874480 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.stg_ecommerce_data"} */
+alter view "analytics_eng"."main"."stg_ecommerce_data__dbt_tmp" rename to "stg_ecommerce_data"
+[0m21:01:12.875219 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:01:12.879006 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: COMMIT
+[0m21:01:12.879489 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m21:01:12.879952 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: COMMIT
+[0m21:01:12.882039 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:01:12.884431 [debug] [Thread-1 (]: Using duckdb connection "model.analytics_eng.stg_ecommerce_data"
+[0m21:01:12.884974 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: /* {"app": "dbt", "dbt_version": "1.10.8", "profile_name": "analytics_eng", "target_name": "dev", "node_id": "model.analytics_eng.stg_ecommerce_data"} */
+
+      drop view if exists "analytics_eng"."main"."stg_ecommerce_data__dbt_backup" cascade
+    
+[0m21:01:12.886564 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:01:12.887948 [debug] [Thread-1 (]: On model.analytics_eng.stg_ecommerce_data: Close
+[0m21:01:12.888919 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1a4431d-80eb-49cd-a135-1e0e1e3e4ea6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e44a0a1c0b0>]}
+[0m21:01:12.889693 [info ] [Thread-1 (]: 2 of 2 OK created sql view model main.stg_ecommerce_data ....................... [[32mOK[0m in 0.12s]
+[0m21:01:12.890460 [debug] [Thread-1 (]: Finished running node model.analytics_eng.stg_ecommerce_data
+[0m21:01:12.891772 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:01:12.892242 [debug] [MainThread]: On master: BEGIN
+[0m21:01:12.892645 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:01:12.893304 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:01:12.893723 [debug] [MainThread]: On master: COMMIT
+[0m21:01:12.894147 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:01:12.894526 [debug] [MainThread]: On master: COMMIT
+[0m21:01:12.895150 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:01:12.895749 [debug] [MainThread]: On master: Close
+[0m21:01:12.896303 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:01:12.896825 [debug] [MainThread]: Connection 'model.analytics_eng.stg_ecommerce_data' was properly closed.
+[0m21:01:12.897519 [info ] [MainThread]: 
+[0m21:01:12.898348 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.34 seconds (0.34s).
+[0m21:01:12.899609 [debug] [MainThread]: Command end result
+[0m21:01:12.919141 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/analytics_eng/target/manifest.json
+[0m21:01:12.920761 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/analytics_eng/target/semantic_manifest.json
+[0m21:01:12.926319 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/analytics_eng/target/run_results.json
+[0m21:01:12.926746 [info ] [MainThread]: 
+[0m21:01:12.927314 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:01:12.927840 [info ] [MainThread]: 
+[0m21:01:12.928545 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m21:01:12.930141 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.342214, "process_in_blocks": "0", "process_kernel_time": 0.167482, "process_mem_max_rss": "158952", "process_out_blocks": "2744", "process_user_time": 2.601953}
+[0m21:01:12.931006 [debug] [MainThread]: Command `dbt run` succeeded at 21:01:12.930854 after 1.34 seconds
+[0m21:01:12.931664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e44a1dd9fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e44a1ddb3b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e449338a540>]}
+[0m21:01:12.932457 [debug] [MainThread]: Flushing usage events
+[0m21:01:13.254197 [debug] [MainThread]: An error was encountered while trying to flush usage events

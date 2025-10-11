@@ -1,7 +1,19 @@
 
+  
+  create view "analytics_eng"."main"."stg_ecommerce_data__dbt_tmp" as (
+    with stg_data as (
+    select
 
-  create or replace view `analytics-eng-470521`.`analytics_eng_dataset`.`stg_ecommerce_data`
-  OPTIONS()
-  as select *
-from `analytics-eng-470521`.`analytics_eng_dataset`.`data`;
+        InvoiceNo::int as invoice_number
+        , StockCode as stock_code
+        , Description as description
+        , Quantity::int as quantity
+        , InvoiceDate::datetime as invoice_at
+        , UnitPrice::numeric as unit_price
+        , CustomerID::int as customer_id
+        , Country as country
 
+    from "analytics_eng"."main"."data"
+)
+select * from stg_data
+  );
