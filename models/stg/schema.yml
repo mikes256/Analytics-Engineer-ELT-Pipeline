@@ -1,0 +1,12 @@
+
+version: 2
+
+models:
+  - name: stg_ecommerce_data
+    description: "Staging layer for ecommerce data. Single source of truth"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
