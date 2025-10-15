@@ -1,0 +1,13 @@
+
+version: 2
+
+models:
+  - name: int_ecommerce__invoices
+    description: "Intermediate layer for ecommerce data. Displaying product invoice information"
+    columns:
+      - name: invoice_number
+        description: "The primary key for this table, unique invoice id number"
+        data_tests:
+          - not_null
+      - name: invoice_at
+        description: "The datetime the invoice was generated"

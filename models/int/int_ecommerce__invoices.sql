@@ -5,7 +5,7 @@ with int_invoice as (
         invoice_number
         , invoice_at
 
-    from stg_ecommerce_data
+    from {{ ref ('stg_ecommerce_data') }}
 )
 select * 
 from int_invoice
