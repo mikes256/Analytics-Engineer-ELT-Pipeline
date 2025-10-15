@@ -14,7 +14,9 @@
 
 - ADD STG TESTS
 - ADD ALL INTS MODELS
-- DEFINE GRAIN DONE FOR NOW 
+- ADD REFERRENTIAL INTEGRITY TO ALL INT MODELS FOR JOINS 
+- DEFINE GRAIN DONE FOR NOW
+- LIKELY MOVE SO MANY SCHEMA TESTS IN `STG` TO THE INT WHERE IT IS MORE SPECIFIC
 
 building mart model
 1. Flags & KPIs: Add fields like is_repeat_buyer, is_churned, avg_days_between_orders
@@ -25,9 +27,116 @@ Incremental logic: For large orders or events tables, use order_date partitions
 Testing: Add not_null, unique, and accepted_values tests for key dimensions
 
 
-   
+🟢 Beginner: Foundation & Familiarity
+These skills prove you can work with dbt confidently and follow best practices.
 
+Project setup: Understand dbt init, folder structure, and dbt run, dbt test, dbt build
 
+Modeling basics: Use ref() to build dependencies, write clean SQL in models/
+
+Staging models: Apply naming conventions (stg_), cast types, clean raw data
+
+Generic tests: Use unique, not_null, accepted_values, relationships in schema.yml
+
+Documentation: Write model and column descriptions, use dbt docs generate and serve
+
+Jinja basics: Use {{ ref('model') }}, {{ config(...) }}, and simple macros
+
+🟡 Intermediate: Business Logic & Reusability
+These skills show you can build scalable, stakeholder-ready data models.
+
+Intermediate models: Aggregate, filter, and derive metrics (int_ layer)
+
+Mart models: Deliver business-ready outputs (mart_ layer) with KPIs and flags
+
+Custom tests: Write SQL-based tests for business logic (e.g. no negative revenue)
+
+Sources & freshness: Use source() blocks, define freshness and loaded_at fields
+
+Macros & hooks: Create reusable logic with Jinja macros and use pre-hook/post-hook
+
+Model configs: Apply materialized='incremental', partition_by, cluster_by, etc.
+
+Data contracts: Use contract: true to enforce schema expectations
+
+🔴 Advanced: Engineering & Enablement
+These skills prove you can lead projects, mentor others, and optimize delivery.
+
+Modular architecture: Design layered models with clear grain and purpose
+
+CI/CD integration: Use dbt with GitHub Actions, GitLab CI, or Bitbucket pipelines
+
+Package management: Use dbt-utils, dbt-expectations, and custom packages
+
+Performance tuning: Optimize SQL, use incremental models, avoid unnecessary scans
+
+Semantic modeling: Define metrics, dimensions, and grain for BI tools
+
+Governance & observability: Track lineage, test coverage, and model health
+
+Stakeholder enablement: Build self-serve marts, document logic, and support analysts
+
+# 🟢 Beginner-Level Practical Skills
+These prove you can build and run dbt models correctly.
+
+Using ref() to build model dependencies
+
+Materializations: view, table, incremental
+
+Basic tests: not_null, unique, accepted_values, relationships
+
+Model configs: config(materialized='table'), alias, tags
+
+Casting and cleaning data: ::DATE, ::INT, LOWER(), TRIM()
+
+Folder structure: staging, intermediate, marts
+
+Running commands: dbt run, dbt test, dbt build, dbt docs serve
+
+# 🟡 Intermediate-Level Practical Skills
+These show you can optimize and scale your models.
+
+Incremental logic:
+
+```sql
+{% if is_incremental() %}
+  WHERE updated_at > (SELECT MAX(updated_at) FROM {{ this }})
+{% endif %}
+```
+Source freshness: loaded_at_field, freshness.threshold
+
+Custom tests: SQL-based tests for business logic (e.g. no negative revenue)
+
+Using macros: Reusable logic with Jinja
+
+Using dbt_utils: surrogate_key, pivot, expression_is_true
+
+Data contracts: contract: true to enforce schema
+
+Snapshots: Track slowly changing dimensions (dbt snapshot)
+
+🔴 Advanced-Level Practical Skills
+These prove you're ready for production-grade engineering.
+
+Partitioning and clustering (BigQuery, Snowflake):
+
+sql
+config(
+  materialized='incremental',
+  partition_by='order_date',
+  cluster_by=['customer_id']
+)
+Performance tuning: Avoid cross joins, use CTEs wisely, filter early
+
+CI/CD integration: dbt in GitHub Actions or GitLab pipelines
+
+Modeling for BI: Define grain, dimensions, and metrics clearly
+
+Semantic layers: Build reusable marts for Looker/Tableau
+
+Debugging: Use dbt debug, dbt compile, and logs to troubleshoot
+
+Governance: Track lineage, test coverage, and model ownership
 
 . Source Freshness + Documentation
 Define sources in sources.yml and add freshness checks.
@@ -104,10 +213,6 @@ Push the code to GitHub with proper documentation.
 Write a README.md explaining the project, data flow, and technologies used.
 Share it in your portfolio to showcase real-world analytics engineering skills.
 
-## Next Steps:
-Implement step by step.
-Test and debug along the way.
-Publish and share the GitHub repository.
 
 
 

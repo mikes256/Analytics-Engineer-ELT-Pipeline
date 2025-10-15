@@ -1,7 +1,7 @@
 import duckdb
 con = duckdb.connect('analytics_eng.duckdb')
 con.sql(
-    "select * from data limit 10"
+    "select * from analytics_eng.main.stg_ecommerce_data limit 10"
     ).show()
 
 # Table Invoices, Col: InvoiceNo, InvoiceDate

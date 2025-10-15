@@ -5,8 +5,27 @@ models:
   - name: stg_ecommerce_data
     description: "Staging layer for ecommerce data. Single source of truth"
     columns:
-      - name: id
-        description: "The primary key for this table"
+      - name: invoice_number
+        description: "The primary key for the invoices table"
         data_tests:
-          - unique
+          - not_null
+      - name: stock_code
+        description: "The product stock code, to easily identify a particular product"
+      - name: description
+        description: "The product description, provides details on the detail of the product"
+      - name: quantity
+        description: "The product quantity, how many are in-stock/available"
+        data_tests:
+          - not_null
+      - name: invoice_at
+        description: "The invoice date timestamp, displays the precise moment an invoice was created"
+      - name: unit_price
+        description: "The products price for one unit"
+        data_tests:
+          - not_null
+      - name: customer_id
+        description: "The id of the customer who purchased the product"
+      - name: country
+        description: "NOT ACTUALLY SURE WHAT COUNTRY IS. I.E. IS IT THE PRODUCTS COUNTRY/THE CUSTOMERS COUNTRY ETC"
+        data_tests:
           - not_null

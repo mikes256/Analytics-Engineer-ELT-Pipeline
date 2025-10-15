@@ -8,7 +8,7 @@
         invoice_number
         , invoice_at
 
-    from stg_ecommerce_data
+    from "analytics_eng"."main"."stg_ecommerce_data"
 )
 select * 
 from int_invoice
