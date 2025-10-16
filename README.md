@@ -11,11 +11,15 @@
   - orders table: UnitPrice, Quantity, Description, StockCode
     - step 1: building intermediate model
       1. Grain clarity: I needed to define whether my mart is per customer, per order, per product, etc
+        1.1. The reason why I am finding it slightly difficult to define the grain is because there isn't just one unique column. For example, if I want to use customer_id there are instances where the same customer has made two purchases on the same or different products and that is reflected. 
+          1.2. Again using that same analysis there is no unique product_code_id or unique identifyer
+            1.3. Therefore the mart must define the nbr of customers as an agg that e.g. purchased a specific product etc. Look at example questions for inspiration.
 
+  
 - ADD STG TESTS
 - ADD ALL INTS MODELS
 - ADD REFERRENTIAL INTEGRITY TO ALL INT MODELS FOR JOINS 
-- DEFINE GRAIN DONE FOR NOW
+- DEFINE GRAIN FOR INDIVIDUAL MART
 - LIKELY MOVE SO MANY SCHEMA TESTS IN `STG` TO THE INT WHERE IT IS MORE SPECIFIC
 
 building mart model
@@ -27,7 +31,7 @@ Incremental logic: For large orders or events tables, use order_date partitions
 Testing: Add not_null, unique, and accepted_values tests for key dimensions
 
 
-🟢 Beginner: Foundation & Familiarity
+# 🟢 Beginner: Foundation & Familiarity
 These skills prove you can work with dbt confidently and follow best practices.
 
 Project setup: Understand dbt init, folder structure, and dbt run, dbt test, dbt build
@@ -42,7 +46,7 @@ Documentation: Write model and column descriptions, use dbt docs generate and se
 
 Jinja basics: Use {{ ref('model') }}, {{ config(...) }}, and simple macros
 
-🟡 Intermediate: Business Logic & Reusability
+# 🟡 Intermediate: Business Logic & Reusability
 These skills show you can build scalable, stakeholder-ready data models.
 
 Intermediate models: Aggregate, filter, and derive metrics (int_ layer)
@@ -59,7 +63,7 @@ Model configs: Apply materialized='incremental', partition_by, cluster_by, etc.
 
 Data contracts: Use contract: true to enforce schema expectations
 
-🔴 Advanced: Engineering & Enablement
+# 🔴 Advanced: Engineering & Enablement
 These skills prove you can lead projects, mentor others, and optimize delivery.
 
 Modular architecture: Design layered models with clear grain and purpose
@@ -115,17 +119,18 @@ Data contracts: contract: true to enforce schema
 
 Snapshots: Track slowly changing dimensions (dbt snapshot)
 
-🔴 Advanced-Level Practical Skills
+# 🔴 Advanced-Level Practical Skills
 These prove you're ready for production-grade engineering.
 
 Partitioning and clustering (BigQuery, Snowflake):
 
-sql
+```sql
 config(
   materialized='incremental',
   partition_by='order_date',
   cluster_by=['customer_id']
 )
+```
 Performance tuning: Avoid cross joins, use CTEs wisely, filter early
 
 CI/CD integration: dbt in GitHub Actions or GitLab pipelines
@@ -137,6 +142,8 @@ Semantic layers: Build reusable marts for Looker/Tableau
 Debugging: Use dbt debug, dbt compile, and logs to troubleshoot
 
 Governance: Track lineage, test coverage, and model ownership
+
+--------
 
 . Source Freshness + Documentation
 Define sources in sources.yml and add freshness checks.
@@ -168,6 +175,11 @@ Track slowly changing dimensions with dbt snapshot.
 
 7. Exposure Layer
 Define dashboards or reports in exposures.yml to show downstream usage.
+
+
+
+
+
 
 ## Analytics Engineer ELT Pipeline 
 #### Goal:
