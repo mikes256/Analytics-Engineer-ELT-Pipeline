@@ -1,9 +1,7 @@
 
     
     
-    
-    create table "analytics_eng"."main"."data" ("InvoiceNo" text,"StockCode" text,"Description" text,"Quantity" integer,"InvoiceDate" text,"UnitPrice" float8,"CustomerID" integer,"Country" text)
-  ;
+    truncate table "analytics_eng"."main"."data";
     -- dbt seed --
     
           COPY "analytics_eng"."main"."data" FROM '/workspaces/analytics_eng/seeds/data.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
