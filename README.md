@@ -1,27 +1,31 @@
 # Financial Transaction Data Pipeline
 
 - S3 bucket to airbyte source done (enhance once I am done calling data from the AWS S3 bucket using a .py script)
-- Connected to duckdb and using conn to view sql
-- Seeded `.csv` files into `/seeds/` directory in dbt
+- connected to duckdb and using conn to view sql
+- seeded `.csv` files into `/seeds/` directory in dbt
 - created staging in models directory which houses the seeded e-commerce 'data' `.csv`.
 - tests for my staging model and listed all columns for visiblity
 - intermediate model
+```yml
   - invoices table: invoiceNo and invoiceDate as columns
   - customers table: CustomerID and Country
   - orders table: UnitPrice, Quantity, Description, StockCode
-    - step 1: building intermediate model
+```
+  #### - step 1: building intermediate model
       1. Grain clarity: I needed to define whether my mart is per customer, per order, per product, etc
         1.1. The reason why I am finding it slightly difficult to define the grain is because there isn't just one unique column. For example, if I want to use customer_id there are instances where the same customer has made two purchases on the same or different products and that is reflected. 
           1.2. Again using that same analysis there is no unique product_code_id or unique identifyer
             1.3. Therefore the mart must define the nbr of customers as an agg that e.g. purchased a specific product etc. Look at example questions for inspiration.
 
-  
-- ADD STG TESTS
-- ADD ALL INTS MODELS
-- ADD REFERRENTIAL INTEGRITY TO ALL INT MODELS FOR JOINS 
-- DEFINE GRAIN FOR INDIVIDUAL MART
-- LIKELY MOVE SO MANY SCHEMA TESTS IN `STG` TO THE INT WHERE IT IS MORE SPECIFIC
+  ####  - step 2: add staging and intermediate `.yml` tests
+      1. i have had to query the data because there are duplicates and non unique keys. my tests were failing originally due to this. but after some sql analysis i realised that most columns don't have a unique key and most columns to have null data.
+      2. taking it a step further tests for my int models mean testing specific is even lighter. normally i would want to keep as many test as early in the transformation as possible to ensure i am not repeating tests and the staging is the single source of truth and can be trusted with validated tests. re-testing staging then intermediate models risks over computation which leads to performance issues and increased costs.
 
+- intermediate model joins. at this stage i would have joined the relevant staging models to expand the footprint of data and get better query prowess by joining necessary staging models. e.g. joining `dim_customer` and `fct_transaction` to get a full customer profile of the transactions. here i would have tested for referential integrity to ensure the joins are water tight and working as expected.
+
+
+- START ANSWERING EACH MART QUESTION AND CREATE UNIQUE NEW TESTS IF NECESSARY
+- ENSURING I AM NOT REPEATING `INT` AND `STG` TESTS
 building mart model
 1. Flags & KPIs: Add fields like is_repeat_buyer, is_churned, avg_days_between_orders
 Cohorts: Use signup_date or first_order_date to group customers

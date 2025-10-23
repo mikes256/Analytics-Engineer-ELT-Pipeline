@@ -1,9 +1,3 @@
-# “Which customers are most valuable?”
-
-# “Which products drive repeat purchases?”
-
-# “What’s our churn rate by cohort?”
-
 # 🛒 Customer Behavior & Segmentation
 Who are our most valuable customers by lifetime revenue?
 
@@ -15,6 +9,8 @@ What percentage of customers are repeat buyers vs one-time buyers?
 
 # 📦 Product Performance
 Which products have the highest return rate?
+
+Which products drive repeat purchases?
 
 What are the top-selling products by category, season, or region?
 
@@ -28,6 +24,8 @@ Which acquisition channels lead to the highest customer lifetime value?
 What’s the conversion rate by campaign or landing page?
 
 How does email engagement correlate with purchase frequency?
+
+What’s our churn rate by cohort?
 
 # 📆 Time-Based Trends
 What are the monthly revenue trends by product category?
